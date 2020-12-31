@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Voleibol.DataAccess\Voleibol.DataAccess.csproj" />
+    <ProjectReference Include="..\Voleibol.Models\Voleibol.Models.csproj" />
+  </ItemGroup>
+
+</Project>
