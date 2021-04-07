@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Voleibol.Web", "src\Voleibo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{24525C72-3D21-42C0-A480-204886200E9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voleibol.Models", "src\Voleibol.Models\Voleibol.Models.csproj", "{FD354884-9B54-44CB-905D-166C907813C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Voleibol.Models", "src\Voleibol.Models\Voleibol.Models.csproj", "{FD354884-9B54-44CB-905D-166C907813C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voleibol.DataAccess", "src\Voleibol.DataAccess\Voleibol.DataAccess.csproj", "{650CC122-18BD-4D4A-8F37-9FA14F3FFD8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Voleibol.BusinessLogic", "src\Voleibol.BusinessLogic\Voleibol.BusinessLogic.csproj", "{CBF80E25-C869-4683-AAF0-BA972928D336}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voleibol.BusinessLogic", "src\Voleibol.BusinessLogic\Voleibol.BusinessLogic.csproj", "{CBF80E25-C869-4683-AAF0-BA972928D336}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "testing", "testing", "{041C0511-6C39-4D28-AD19-F8D13E5C374B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voleibol.Testing", "Voleibol.Testing\Voleibol.Testing.csproj", "{65DF680E-3299-48C9-8221-2EBC69E146B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,14 +29,14 @@ Global
 		{FD354884-9B54-44CB-905D-166C907813C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD354884-9B54-44CB-905D-166C907813C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD354884-9B54-44CB-905D-166C907813C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{650CC122-18BD-4D4A-8F37-9FA14F3FFD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{650CC122-18BD-4D4A-8F37-9FA14F3FFD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{650CC122-18BD-4D4A-8F37-9FA14F3FFD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{650CC122-18BD-4D4A-8F37-9FA14F3FFD8E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBF80E25-C869-4683-AAF0-BA972928D336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBF80E25-C869-4683-AAF0-BA972928D336}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBF80E25-C869-4683-AAF0-BA972928D336}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBF80E25-C869-4683-AAF0-BA972928D336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65DF680E-3299-48C9-8221-2EBC69E146B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65DF680E-3299-48C9-8221-2EBC69E146B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65DF680E-3299-48C9-8221-2EBC69E146B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65DF680E-3299-48C9-8221-2EBC69E146B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,8 +44,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5481D010-DF42-4A49-9B3B-29A3BDB02FF1} = {24525C72-3D21-42C0-A480-204886200E9B}
 		{FD354884-9B54-44CB-905D-166C907813C4} = {24525C72-3D21-42C0-A480-204886200E9B}
-		{650CC122-18BD-4D4A-8F37-9FA14F3FFD8E} = {24525C72-3D21-42C0-A480-204886200E9B}
 		{CBF80E25-C869-4683-AAF0-BA972928D336} = {24525C72-3D21-42C0-A480-204886200E9B}
+		{65DF680E-3299-48C9-8221-2EBC69E146B6} = {041C0511-6C39-4D28-AD19-F8D13E5C374B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE5D7882-81EA-4C3F-913F-819CDD4DA98E}

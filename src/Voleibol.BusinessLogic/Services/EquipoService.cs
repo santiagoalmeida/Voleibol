@@ -17,7 +17,7 @@ namespace Voleibol.BusinessLogic.Services
             this._unitOfWork = unitOfWork;
         }
 
-        public async Task InsertEquipoAsync(Equipo equipo)
+        public async Task InsertEquipoAsync(Match equipo)
         {
             await _unitOfWork.Equipo.InsertarAsync(equipo);
             await _unitOfWork.CommitAsync();

@@ -1,0 +1,35 @@
+<div class="row" *ngIf="this.match">
+  <div class="col-md-5">
+    <h2 class="text-right">{{match.team1}}</h2>
+  </div>
+  <div class="col-md-2">
+    <h2 class="text-center">VS</h2>
+  </div>
+  <div class="col-md-5">
+    <h2 class="text-left">{{match.team2}}</h2>
+  </div>
+</div>
+<div class="row pb-2">
+  <div class="col-md-1"><h4 class="text-center">Set</h4></div>
+  <div class="col-md-11"><h4 class="text-center">Marcador</h4></div>
+</div>
+<div class="row pb-2" *ngFor="let matTim of match.times">
+  <div class="col-sm-1 col-md-1"><h2 class="text-center">{{matTim.numTime}}</h2></div>
+  <div class="col-sm-4 col-md-4"><h2 class="text-right">{{matTim.team1Points}}</h2></div>
+  <div class="col-sm-2 col-md-2"><h2 class="text-center">-</h2></div>
+  <div class="col-sm-4 col-md-4"><h2>{{matTim.team2Points}}</h2></div>
+</div>
+<div *ngIf="!match.finish" class="row mb-3">
+  <div class="col-md-6"><button class="btn btn-block btn-outline-success" (click)="punto(1)">+</button></div>
+  <div class="col-md-6"><button class="btn btn-block btn-outline-success" (click)="punto(2)">+</button></div>
+</div>
+<div *ngIf="match.finish" class="row mb-3">
+  <div class="col-md-12 py-5 bg-success">
+    <h2 class="text-center">{{match.winner}} WIN!</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-block btn-outline-danger" (click)="terminar()">Terminar!</button>
+  </div>
+</div>

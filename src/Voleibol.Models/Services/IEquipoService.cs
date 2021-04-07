@@ -9,6 +9,6 @@ namespace Voleibol.Models.Services
 {
     public interface IEquipoService
     {
-        Task InsertEquipoAsync(Equipo equipo);
+        Task InsertEquipoAsync(Match equipo);
     }
 }

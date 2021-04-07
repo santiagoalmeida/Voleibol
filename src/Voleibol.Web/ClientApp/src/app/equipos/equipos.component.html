@@ -1,0 +1,21 @@
+<div class="text-center">
+  <h3>MATCH</h3>
+</div>
+
+<form [formGroup]="formEquipos" (ngSubmit)="save()">
+  <div class="row">
+    <div class="col-md-5 form-group">
+      <input placeholder="Equipo 1" class="form-control" formControlName="team1" />
+    </div>
+    <div class="col-md-2 text-center"><h2>VS</h2></div>
+    <div class="col-md-5 form-group">
+      <input placeholder="Equipo 2" class="form-control" formControlName="team2" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-block btn-outline-success" [disabled]="!formEquipos.valid"> Comienza!</button>
+    </div>
+  </div>
+</form>
+

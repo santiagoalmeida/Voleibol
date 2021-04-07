@@ -4,10 +4,10 @@ using Voleibol.Models.Data;
 
 namespace Voleibol.Models.Repositorios
 {
-    public interface IPartidoSetRepository: IRepository<PartidoSet>
+    public interface IPartidoSetRepository: IRepository<Times>
     {
-        Task<IEnumerable<PartidoSet>> GetPartidoSetAsync();
-        Task InsertPartidoSetAsync(PartidoSet entity);
-        void UpdatePartidoSet(PartidoSet entity);
+        Task<IEnumerable<Times>> GetPartidoSetAsync();
+        Task InsertPartidoSetAsync(Times entity);
+        void UpdatePartidoSet(Times entity);
     }
 }

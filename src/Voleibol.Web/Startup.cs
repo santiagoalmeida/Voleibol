@@ -1,12 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Voleibol.BusinessLogic.Services;
-using Voleibol.DataAccess;
 using Voleibol.Models;
 using Voleibol.Models.Services;
 
@@ -31,15 +29,6 @@ namespace Voleibol.Web
                 configuration.RootPath = "ClientApp/dist";
             });
 
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddDbContext<VoleibolContext>(
-                options => options.UseSqlServer(
-                    Configuration.GetConnectionString("Default"),
-                    x => x.MigrationsAssembly("Voleibol.DataAccess")
-                    )
-                );
-
-            services.AddTransient<IEquipoService, EquipoService>();
             services.AddTransient<IPartidoSetService, PartidoSetService>();
         }
 
@@ -47,15 +36,9 @@ namespace Voleibol.Web
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
-            {
                 app.UseDeveloperExceptionPage();
-            }
             else
-            {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

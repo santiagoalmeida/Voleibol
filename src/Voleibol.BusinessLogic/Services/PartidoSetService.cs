@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Voleibol.BusinessLogic.Logic;
 using Voleibol.Models;
 using Voleibol.Models.Data;
 using Voleibol.Models.Services;
@@ -11,20 +12,22 @@ namespace Voleibol.BusinessLogic.Services
 {
     public class PartidoSetService : IPartidoSetService
     {
-        private readonly IUnitOfWork _unitOfWork;
-        public PartidoSetService(IUnitOfWork unitOfWork)
+        MatchLogic partSvc;
+        public PartidoSetService()
         {
-            this._unitOfWork = unitOfWork;
+            partSvc = new MatchLogic();
         }
 
-        public Task ActualizarPartidoSet(PartidoSet partidoSet)
+        public Match AddPoint(Match match)
         {
-            throw new NotImplementedException();
+            partSvc.AddPoint(match);
+            return match;
         }
 
-        public Task<IEnumerable<PartidoSet>> GetPartidoAsync()
+        public Match CheckSet(Match match)
         {
-            throw new NotImplementedException();
+            partSvc.CheckSet(match);
+            return match;
         }
     }
 }

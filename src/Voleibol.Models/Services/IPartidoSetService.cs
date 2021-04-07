@@ -6,7 +6,7 @@ namespace Voleibol.Models.Services
 {
     public interface IPartidoSetService
     {
-        Task<IEnumerable<PartidoSet>> GetPartidoAsync();
-        Task ActualizarPartidoSet(PartidoSet partidoSet);
+        Match AddPoint(Match match);
+        Match CheckSet(Match match);
     }
 }

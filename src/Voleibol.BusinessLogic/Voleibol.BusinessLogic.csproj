@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Voleibol.DataAccess\Voleibol.DataAccess.csproj" />
     <ProjectReference Include="..\Voleibol.Models\Voleibol.Models.csproj" />
   </ItemGroup>
 

@@ -7,8 +7,8 @@ using Voleibol.Models.Data;
 
 namespace Voleibol.Models.Repositorios
 {
-    public interface IEquipoRepository: IRepository<Equipo>
+    public interface IEquipoRepository: IRepository<Match>
     {
-        Task InsertarEquipoAsync(Equipo entidad);
+        Task InsertarEquipoAsync(Match entidad);
     }
 }
